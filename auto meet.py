@@ -18,8 +18,8 @@ except:
 try: # to check for proper syntax
     for x in range(len(meets)):
         checky = meets[x].split()
-        int(data[1])
-        int(data[0])
+        int(checky[1])
+        int(checky[0])
 except:
     print("an error occurred when read meetings.txt, is the syntax wrong?")
     working = False
