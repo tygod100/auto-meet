@@ -6,22 +6,27 @@ import time
 meets = list()
 working = True # to check if anything is wong
 
+weekdays = ["monday", "tuesday", "wednesday", 'thursday', 'friday', 'saturday', 'sunday'] #days in order
+setdays = [0,1,2,3,4,5,6] # days that will be used, defalst all
+
+print(weekdays[2])
 try:
     f = open("meetings.txt", "r")
     meets = list(f.readlines())
     #print(meets)
     f.close()
 except:
-    print("an error occurred when read meetings.txt, does it exist?")
+    print("an error occurred when reading meetings.txt, does it exist?")
     working = False
 
 try: # to check for proper syntax
     for x in range(len(meets)):
         checky = meets[x].split()
-        int(checky[1])
-        int(checky[0])
+        if not (len(checky) <= 0 or checky[0].lower() == "setday"):
+            int(checky[1])
+            int(checky[0])
 except:
-    print("an error occurred when read meetings.txt, is the syntax wrong?")
+    print("an error occurred when reading meetings.txt, is the syntax wrong?")
     working = False
     
 #time.sleep(2.4)# delays be 2.4 Seconds
@@ -31,8 +36,14 @@ while working:
     time.sleep(30)# delay for each check
     localtimer = time.localtime(time.time())# get time
     for x in range(len(meets)):
-        data = meets[x].split()
-        if (int(localtimer.tm_hour) == int(data[0]) and int(localtimer.tm_min) == int(data[1])):
+        data = meets[x].split() #.lower()
+        if checky[0].lower() == "setday":
+            setdays = list() # reset set day list
+            for i in range(len(data)):
+                if data[i] in weekdays:
+                    setdays.append(weekdays.index(data[i]))
+                
+        elif (int(localtimer.tm_hour) == int(data[0]) and int(localtimer.tm_min) == int(data[1]) and localtimer.tm_wday in setdays):
             open_new_tab(data[2])
     #print(localtimer)
 
