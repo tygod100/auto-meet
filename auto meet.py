@@ -9,7 +9,7 @@ working = True # to check if anything is wong
 weekdays = ["monday", "tuesday", "wednesday", 'thursday', 'friday', 'saturday', 'sunday'] #days in order
 setdays = [0,1,2,3,4,5,6] # days that will be used, defalst all
 
-print(weekdays[2])
+
 try:
     f = open("meetings.txt", "r")
     meets = list(f.readlines())
@@ -37,13 +37,15 @@ while working:
     localtimer = time.localtime(time.time())# get time
     for x in range(len(meets)):
         data = meets[x].split() #.lower()
-        if checky[0].lower() == "setday":
+        if len(data) <= 0: # when emty skip
+            1 + 1
+        elif data[0].lower() == "setday": # when stert with setdays set days
             setdays = list() # reset set day list
             for i in range(len(data)):
                 if data[i] in weekdays:
                     setdays.append(weekdays.index(data[i]))
                 
-        elif (int(localtimer.tm_hour) == int(data[0]) and int(localtimer.tm_min) == int(data[1]) and localtimer.tm_wday in setdays):
+        elif (int(localtimer.tm_hour) == int(data[0]) and int(localtimer.tm_min) == int(data[1]) and (localtimer.tm_wday in setdays)):
             open_new_tab(data[2])
     #print(localtimer)
 
