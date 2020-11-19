@@ -38,9 +38,9 @@ _by default meeting will open on every day _
 this will open the first link on 5:55am only on wednesday and thursday and will only open the second on monday
 
 #to do
-* maybe inprove read me
+* maybe improve instructions on read me
 * make use easyer
 * make GUI
 * make exe
-* might break in daylight saving time, figer out how it works
+* might break in daylight saving time, figure out how it works
 
