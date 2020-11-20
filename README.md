@@ -31,8 +31,11 @@ _by default meeting will open on every day _
 
 ### examples
 >setday wednesday thursday
+
 > 5 55 https://en.wikipedia.org/wiki/Meeting
+
 >setday monday
+
 > 14 23 https://en.wikipedia.org/wiki/24-hour_clock
 
 this will open the first link on 5:55am only on wednesday and thursday and will only open the second on monday
