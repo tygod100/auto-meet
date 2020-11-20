@@ -41,6 +41,5 @@ this will open the first link on 5:55am only on wednesday and thursday and will 
 * maybe improve instructions on read me
 * make use easyer
 * make GUI
-* make exe
 * might break in daylight saving time, figure out how it works
 
