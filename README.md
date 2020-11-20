@@ -6,7 +6,7 @@ This will automatically open zoom, google meed, or whatever it is you need for y
 ## set up
 In the same folder as the **"auto meet.py"** file (or the .exe when I get to making that), make a **"meetings.txt"** file. _Note that is is **case sestive**; the file name **"Meetings.txt"** won't work but **"meetings.txt"** will, this is because the former had an uppercase._
 
-##making meetings
+## making meetings
 In put in every line in the txt file the data, this is in 3 parts each seprated by a space. The first part is the hour of the meeting, in the second part is the minute, and the third is the meeting's url. _Note that this uses a **24 hour** clock; **2 0** is **2-am** and **14 0** is **2-pm**._
 
 ### examples
