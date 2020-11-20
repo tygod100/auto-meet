@@ -45,7 +45,7 @@ while working:
                 if data[i] in weekdays:
                     setdays.append(weekdays.index(data[i]))
                 
-        elif (int(localtimer.tm_hour+ localtimer.tm_isdst) == int(data[0]) and int(localtimer.tm_min) == int(data[1]) and (localtimer.tm_wday in setdays)):
+        elif (int(localtimer.tm_hour + localtimer.tm_isdst) == int(data[0]) and int(localtimer.tm_min) == int(data[1]) and (localtimer.tm_wday in setdays)):
             open_new_tab(data[2])
     #print(localtimer)
 

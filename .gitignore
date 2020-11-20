@@ -1,1 +1,4 @@
 meetings.*
+__pycache__/
+build/
+dist/
