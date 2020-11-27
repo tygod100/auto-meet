@@ -6,7 +6,7 @@ This will automatically open zoom, google meed, or whatever it is you need for y
 
 ## set up
 
-1. Downloded the **exe** file. The current release can be found to the right of the main page, you should find it under the **"Assets"** of the [latest release](https://github.com/tygod100/auto-meet/releases/new).
+1. Downloded the **exe** file. The current release can be found to the right of the main page, you should find it under the **"Assets"** of the [latest release](https://github.com/tygod100/auto-meet/releases).
 2. ones you've downloded the **exe** file, puting in a easy to reach folder then create a new text document **(.txt)** in the same folder.
 3. name the new text file **_"meetings.txt"_**, this is case senstive so make sure it's all lower case.
 4. read below on how to set days and meetings, then run the **exe** file and leave the window open
@@ -46,7 +46,7 @@ this is the syntax of a meetting:
 
 The **"setday"** part will _stay_ as it is, this is to tell the program what your trying to do
 
-The **"[days(list)]"** part is where you'll put all the days of the week you want and separate them by a space, this will make all meething set after this line only open on the set days and will be over witten the next time **setday** is called. _Make sure you spell them correctly._ **by default meeting will open on every day **
+The **"[days(list)]"** part is where you'll put all the days of the week you want and separate them by a space, this will make all meething set after this line only open on the set days and will be over witten the next time **setday** is called. _Make sure you spell them correctly._ **by default meeting will open on every day**
   
 ### examples
 >setday wednesday thursday
